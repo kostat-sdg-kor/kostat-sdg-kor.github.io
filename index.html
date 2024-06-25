@@ -5,9 +5,21 @@
  	<meta charset="utf-8" />
   	<meta http-equiv="refresh" content="0;url=https://kostat-sdg-kor.github.io/sdg-indicators">
 	<script>
-		function pop() {
-			window.open("Popup.asp", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no")
-		}
+		window.onload=function(){
+			var popup=window.open("", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no");
+			popup.document.write('
+				<!DOCTYPE html>
+				<html>
+					<head>
+					     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+					<title>팝업 창</title>
+				</head>
+				<body> Testing popup window </body>
+				</html>
+			);
+			setTimeout(function(){
+				window.location.href = "https://kostat-sdg-kor.github.io/sdg-indicators/";), 10);
+		};
 	</script>
 </head>
 <body>
